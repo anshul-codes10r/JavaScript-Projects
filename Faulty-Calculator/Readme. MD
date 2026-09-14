@@ -1,0 +1,33 @@
+# JavaScript Projects
+
+A collection of small JavaScript exercises and projects that I build while learning JavaScript.
+
+This repository is mainly for practice, problem-solving, and tracking my progress as I learn.
+
+## Projects
+
+### Faulty Calculator
+
+A simple JavaScript learning exercise based on a faulty calculator.
+
+The calculator performs the wrong operation about 10% of the time:
+
+- `+` becomes `-`
+- `-` becomes `/`
+- `*` becomes `+`
+- `/` becomes `**`
+
+The other 90% of the time, it performs the normal operation.
+
+### Concepts Practiced
+
+- `prompt()`
+- `Number()`
+- `Math.random()`
+- `if / else if / else`
+- Basic arithmetic operators
+- Conditional logic
+
+## Note
+
+This is a small learning exercise, not a production-ready calculator application.
