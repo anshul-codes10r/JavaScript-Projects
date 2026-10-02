@@ -1,0 +1,638 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main container*/
+.main-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, #25261B, #0D0F0A);
+}
+/* Welcome Panel */
+.welcome-panel {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 2.5s ease, transform 2.5s ease;
+    display: inline-block;
+    padding: 15px;
+    margin-left: px;
+    margin-top: 200px;
+    border-radius: 9px;
+    border: none;
+    background: linear-gradient(135deg, #17170F, #302F20, #1D1D16);
+}
+.welcome-panel h2 {
+    margin-left: 15px;
+    font-style: italic;
+    color: white;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.welcome-panel h3:first-of-type {
+    font-size: 1px;
+    font-style: italic;
+    color: #C9C9C3;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.welcome-panel div:nth-child(3) {
+    color: #8F8B8B;
+    margin: 12px 0 5px 0;
+}
+.welcome-panel div:nth-child(3) input {
+    padding: 3px;
+    border: none;
+    border-radius: 6px;
+    background: #15150D;
+    color: #E8E7E2;
+}
+
+.welcome-panel div:nth-child(4) {
+    color: #8F8B8B;
+    margin: 10px 0 8px 0;
+}
+.welcome-panel div:nth-child(4) input {
+    padding: 3px;
+    border: none;
+    border-radius: 6px;
+    background: #15150D;
+    color: #E8E7E2;
+}
+
+.welcome-panel div:nth-child(5) {
+    color: #8F8B8B;
+    margin: 10px 0 0 0;
+}
+.welcome-panel div:nth-child(5) input {
+    padding: 3px;
+    border: none;
+    border-radius: 6px;
+    background: #15150D;
+    color: #E8E7E2;
+}
+.welcome-panel > button:first-of-type {
+    border: none;
+    background-color: #FFE724;
+    font-style: italic;
+    margin: 17px 0 0 0;
+    padding: 5px 70px 5px 70px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+.welcome-panel h3:last-of-type {
+    font-size: 1px;
+    font-style: italic;
+    color: #E8E7E2;
+    margin-top: 10px;
+    margin-left: 55px;
+}
+.welcome-panel span button:first-child {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    font-style: italic;
+    margin: 10px 1px 0 0;
+    background: #15150D;
+    color: white;
+}
+.welcome-panel span button:last-child {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    font-style: italic;
+    margin: 10px 0 0 1px;
+    background: #15150D;
+    color: #E8E7E2;
+}
+/* Lamp */
+.lamp-container {
+    position: relative;
+}
+.stand {
+    width: 4px;
+    height: 11vh;
+    background: black;
+    margin-left: 100px;
+    margin-top: -180px;
+}
+.base {
+    width: 75px;
+    height: 20px;
+    background: black;
+    margin-left: 65px;
+    clip-path: polygon(
+        20% 0%,
+        80% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+.top {
+    width: 105px;
+    height: 45px;
+    background: black;
+    margin-left: 51px;
+    margin-top: -200px;
+    clip-path: polygon(
+        20% 0%,
+        80% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+.wire {
+    width: 3px;
+    height: 5vh;
+    background: black;
+    margin-left: 140px;
+}
+.pull-wire {
+    width: 5px;
+    height: 1vh;
+    background: #F5F571;
+    margin-left: 138px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.shade {
+    width: 30vw;
+    height: 15vh;
+    background: #FFD447;
+    margin-left: 25px;
+    margin-top: -52px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 190, 40, 0.75),
+        rgba(255, 210, 70, 0.45),
+        rgba(255, 220, 100, 0.18),
+        rgba(255, 220, 100, 0)
+    );
+    filter: blur(10px);
+    clip-path: polygon(
+        35.5% 0%,
+        64.5% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+.particles {
+    position: absolute;
+    width: 6px;
+    height: 5px;
+    background: #FFD700;
+    box-shadow: 0 0 8px #FFD700, 0 0 16px #FFA500;
+    border-radius: 50%;
+    animation: moveParticle 6s linear infinite;
+}
+.particle1 { left: 10%; top: 84%; }
+.particle2 { left: 80%; top: 65%; animation: move 15s linear 3s infinite; }
+.particle3 { left: 90%; top: 60%; animation-delay: 2s; }
+.particle4 { left: 20%; top: 30%; animation: move2 15s linear 3s infinite; }
+.particle5 { left: 30%; top: 44%; animation-delay: 4s; }
+.particle6 { left: 90%; top: 10%; animation: moveLeft 15s linear 2s infinite }
+.particle7 { left: 15%; top: 20%; animation-delay: 3s; }
+.particle8 { left: 30%; top: 30%; animation: move3 10s linear 4s infinite;}
+.particle9 { left: 75%; top: 90%; animation-delay: 4s; }
+.particle10 { left: 45%; top: 15%; animation: move4 8s linear 1s infinite; }
+
+@keyframes moveParticle {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(80px, -120px);
+        opacity: 0;
+    }
+}
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+       opacity: 0.8; 
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(80px, -100px);
+        opacity: 0.5;
+    }
+}
+@keyframes move2 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+    }
+    20% {
+        transform: translate(20px, 80px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-100px, -80px);
+        opacity: 1;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        transform: translate(0,0);
+        opacity: 0.1;
+    }
+    20% {
+        transform: translate(50px, -40px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-100px, -100px);
+        opacity: 1;
+    }
+}
+@keyframes move3 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    60% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(50px, -80px);
+    }
+}
+@keyframes move4 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translate(50px, -80px);
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-100px, 80px);
+    }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    .main-container {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background: radial-gradient(circle, #25261B, #0D0F0A);
+    }
+    .welcome-panel {
+        display: inline-block;
+        padding: 18px;
+        margin-left: 48vw;
+        margin-top: 20vh;
+        background-color: #212119;
+        border-radius: 9px;
+        border: none;
+        background: linear-gradient(135deg, #17170F, #302F20, #1D1D16);
+    }
+    .welcome-panel h2 {
+        margin-left: 15px;
+        font-style: italic;
+        color: white;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .welcome-panel div:nth-child(3) {
+        color: #8F8B8B;
+        margin: 11px 0 9px 0;
+    }
+    .welcome-panel div:nth-child(3) input {
+        padding: 4px;
+        border: none;
+        border-radius: 6px;
+        background: #15150D;
+        color: #E8E7E2;
+    }
+    .welcome-panel div:nth-child(4) {
+        color: #8F8B8B;
+        margin: 8px 0 8px 0;
+    }
+    .welcome-panel div:nth-child(4) input {
+        padding: 4px;
+        border: none;
+        border-radius: 6px;
+        background: #15150D;
+        color: #E8E7E2;
+    }
+    .welcome-panel div:nth-child(5) {
+        color: #8F8B8B;
+        margin: 8px 0 0 0;
+    }
+    .welcome-panel div:nth-child(5) input {
+        padding: 4px;
+        border: none;
+        border-radius: 6px;
+        background: #15150D;
+        color: #E8E7E2;
+    }
+    .welcome-panel > button:first-of-type {
+        border: none;
+        background-color: #FFE724;
+        font-style: italic;
+        margin: 13px 0 0 0;
+        padding: 5px 70px 5px 70px;
+        border-radius: 5px;
+        font-size: 9px;
+    }
+    .welcome-panel h3:last-of-type {
+        font-size: 1px;
+        font-style: italic;
+        color: #E8E7E2;
+        margin-top: 10px;
+        margin-left: 55px;
+        color: white;
+    }
+    .welcome-panel span button:first-child {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px 5px 15px;
+        font-style: italic;
+        margin: 8px 1px 0 0;
+        background: #15150D;
+        color: white;
+    }
+    .welcome-panel span button:last-child {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px 5px 15px;
+        font-style: italic;
+        margin: 8px 0 0 1px;
+        background: #15150D;
+        color: #E8E7E2;
+    }
+    
+    .lamp-container {
+        position: relative;
+    }
+    .stand {
+        width: 4px;
+        height: 14vh;
+        background: black;
+        margin-left: 105px;
+    }
+    .base {
+        width: 16.5vw;
+        height: 2.5vh;
+        background: black;
+        margin-left: 60px;
+        clip-path: polygon(
+            20% 0%,
+            80% 0%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    .top {
+        width: 23vw;
+        height: 5vh;
+        background: black;
+        margin-left: 45px;
+        clip-path: polygon(
+            20% 0%,
+            80% 0%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    .wire {
+        width: 2.5px;
+        height: 3.5vh;
+        background: black;
+        margin-left: 26vw;
+    }
+    .pull-wire {
+        width: 4px;
+        height: 1vh;
+        background: #F5F571;
+        margin-left: 25.8vw;
+        margin-top: -1vh;
+        cursor: pointer;
+    }
+    .shade {
+        width: 35vw;
+        height: 18vh;
+        background: #FFD447;
+        margin-left: 15px;
+        margin-top: -3.5vh;
+        opacity: 0.30;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 190, 40, 0.75),
+            rgba(255, 210, 70, 0.45),
+            rgba(255, 220, 100, 0.18),
+            rgba(255, 220, 100, 0)
+        );
+        filter: blur(10px);
+        clip-path: polygon(
+            35.5% 0%,
+            64.5% 0%,
+            100% 100%,
+            0% 100%
+        );
+    }
+} 
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 991px) {
+    /* Welcome panel */
+    .welcome-panel h2 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .welcome-panel h3:first-of-type {
+        font-size: 4px;
+    }
+    .welcome-panel div:nth-child(3) {
+        color: #8F8B8B;
+        margin: 10px 0 8px 0;
+    }
+    .welcome-panel div:nth-child(3) input {
+        padding: 5px;
+    }
+    .welcome-panel div:nth-child(4) {
+        margin: 10px 0 10px 0;
+    }
+    .welcome-panel div:nth-child(4) input {
+        padding: 5px;
+    }
+    .welcome-panel div:nth-child(5) {
+        margin: 10px 0 0 0;
+    }
+    .welcome-panel div:nth-child(5) input {
+        padding: 5px;
+    }
+    .welcome-panel > button:first-of-type {
+        margin: 17px 0 0 0;
+        padding: 5px 70px 5px 70px;
+        font-size: 12px;
+    }
+    .welcome-panel h3:last-of-type {
+        font-size: 2px;
+    }
+    .welcome-panel span button:first-child {
+        padding: 7px 17px 7px 17px;
+        margin: 10px 1px 0 0;
+    }
+    .welcome-panel span button:last-child {
+        padding: 7px 17px 7px 17px;
+        margin: 10px 0 0 1px;
+    }
+    .welcome-panel {
+        padding: 20px;
+        margin-left: 36vw;
+        margin-top: 17vh;
+    }
+    /* Lamp */
+    .stand {
+        width: 4px;
+        height: 12vh;
+        margin-left: 15vw;
+        margin-top: -14vh;
+    }
+    .base {
+        width: 75px;
+        height: 23px;
+        margin-left: 85px;
+    }
+    .top {
+        width: 17vw;
+        height: 4vh;
+        margin-left: 6.7vw;
+        margin-top: -16vh;
+    }
+    .wire {
+        width: 3px;
+        height: 3vh;
+        margin-left: 21vw;
+    }
+    .pull-wire {
+        width: 5px;
+        height: 1vh;
+        margin-left: 20.9vw;
+        margin-top: -10px;
+        cursor: pointer;
+    }
+    .shade {
+        width: 30vw;
+        height: 15vh;
+        margin-left: 5px;
+        margin-top: -3.4vh;
+    }
+}
+
+/* Laptops */
+@media (min-width: 992px) and (max-width: 1440px) {
+    /* Lamp */
+    .stand {
+        width: 4px;
+        height: 5.2vh;
+        margin-left: 8vw;
+        margin-top: -6vh;
+    }
+    .base {
+        width: 75px;
+        height: 20px;
+        margin-left: 2.8vh;
+        margin-top: -15px;
+    }
+    .top {
+        width: 8vw;
+        height: 45px;
+        margin-left: 3.8vw;
+        margin-top: -7vh;
+    }
+    .wire {
+        width: 3px;
+        height: 1vh;
+        margin-left: 10vw;
+    }
+    .pull-wire {
+        width: 5px;
+        height: 15px;
+        margin-left: 10vw;
+        margin-top: -6px;
+        cursor: pointer;
+    }
+    .shade {
+        width: 20vw;
+        height: 6vh;
+        margin-left: -2.3vw;
+        margin-top: -1.3vh;
+    }
+}
+
+/* Initial lamp state */
+.main-container {
+    background: #000;
+}
+
+.welcome-panel,
+.stand,
+.base,
+.top,
+.shade,
+.wire{
+    opacity: 0;
+}
+
+.pull-wire {
+    position: relative;
+    z-index: 100;
+}
+
+.shade {
+    pointer-events: none;
+}
+
+.particles {
+    opacity: 0;
+    animation-play-state: paused;
+}
+.main-container.lamp-on .shade {
+    opacity: 0.60;
+}
+.main-container.lamp-on .welcome-panel {
+    opacity: 1;
+    transform: translateX(0);
+}
+.main-container.lamp-on {
+   background: radial-gradient(circle, #25261B, #0D0F0A);
+}
+.main-container.lamp-on .stand,
+.main-container.lamp-on .base,
+.main-container.lamp-on .top,
+.main-container.lamp-on .wire {
+    opacity: 1;
+}
+.main-container.lamp-on .particles {
+    animation-play-state: running;
+}
